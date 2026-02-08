@@ -1,0 +1,101 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* FUNDO DA PÁGINA */
+body {
+  min-height: 100vh;
+  background: #ff6a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTAINER DO CADASTRO */
+.cadastro-container {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* TÍTULO */
+.cadastro-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2933;
+}
+
+/* FORMULÁRIO */
+.cadastro-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS */
+.cadastro-container input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.cadastro-container input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* BOTÃO */
+.cadastro-container button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cadastro-container button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* MENSAGEM */
+#msg {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .cadastro-container {
+    margin: 0 15px;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h2>Meu perfil </h2>
+        <button id="btnSair">Sair</button>
+    </header>
+
+<main class="painel-container">
+
+<section class="perfil">
+        <div class="perfil-container">
+        <label for="fotoPerfil" class="foto-label">
+          <img 
+            id="previewFoto"
+            src="img/avatar.png" 
+            alt="Foto de perfil">
+            <span>Alterar Foto</span>
+        </label>
+
+        
+        <input
+         type="file" 
+         name="fotoPerfil"
+          id="fotoPerfil"
+          accept="image/*"
+          hidden>
+      </div>
+        
+            <p><strong>Nome:</strong><h3> <span id="nome"></span></h3></p>
+            <p><strong>Email:</strong><h3> <span id="email"></span></h3></p>
+        </section>
+
+        <section class="card">
+            <h4>Meus pedidos</h4>
+        <ul id="listaPedidos">
+            <li>Nenhum pedido realizado.</li>
+        </ul>
+        </section>
+</main>
+
+    <script src="js/perfil-usuario.js"></script>
+</body>
+</html>

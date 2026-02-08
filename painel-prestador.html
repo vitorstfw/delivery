@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>painel de Prestadores</title>
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet"
+     href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    
+</head>
+<body>
+     <header class="painel-header">
+    <h2>Painel do Prestador</h2>
+    <button id="btnSair">Sair</button>
+    
+  </header>
+
+  <main class="painel-container">
+    
+    <section class="perfil">
+
+      <div class="perfil-container">
+        <label for="fotoPerfil" class="foto-label">
+          <img 
+            id="previewFoto"
+            src="img/avatar.png" 
+            alt="Foto de perfil">
+            <span>Alterar Foto</span>
+        </label>
+
+        <input
+         type="file" 
+         name="fotoPerfil"
+          id="fotoPerfil"
+          accept="image/*"
+          hidden>
+      </div>
+
+      <h3>Meu Perfil</h3>
+      <p><strong>Nome:</strong> <span id="nome"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Serviço:</strong> <span id="servico"></span></p>
+    </section>
+
+    <section class="pedidos">
+      <h3>Pedidos Recebidos</h3>
+      <ul id="listaPedidos">
+        <li>Nenhum pedido ainda.</li>
+      </ul>
+    </section>
+
+    <div class="abas-perfil">
+      <button class="aba ativa" data-aba="avaliacoes">Avaliações</button>
+      <button class="aba" data-aba="mapa">Mapa / Rotas</button>
+    </div>
+
+    <div class="conteudo-aba ativa" id="avaliacoes">
+      <h3>Avaliações</h3>
+
+      <div id="listaAvaliacoes"></div>
+
+      <textarea name="cometario" id="cometario" placeholder="Deixe sua avaliação"></textarea>
+
+      <select name="nota" id="nota">
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+     <button id="btnAvaliar">Avaliar</button>
+     </div>
+
+     <div class="conteudo-aba" id="mapa">
+      <h3>Minha Localização</h3>
+<div id="map" style="height: 300px;"></div>
+     </div>
+
+  </main>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/painel-prestador.js"></script>
+
+</body>
+</html>
