@@ -1,13 +1,6 @@
 
-
-
-
 function buscarServico() {
-  const input = document
-    .getElementById("inputServico")
-    .value
-    .toLowerCase();
-
+  const input = document.getElementById("inputServico").value.toLowerCase();
   const lista = document.getElementById("lista-servicos");
   const prestadores = JSON.parse(localStorage.getItem("prestadores")) || [];
 
