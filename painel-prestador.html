@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>painel de Prestadores</title>
     <link rel="stylesheet" href="estilos/style.css">
-
-    <link rel="stylesheet"
-     href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     
     
 </head>
 <body>
-     <header class="painel-header">
+<!--Inicio do header-->
+   <header class="painel-header">
     <h2>Painel do Prestador</h2>
-    <button id="btnSair">Sair</button>
-    
+    <button id="btnSair">Sair</button> 
   </header>
+<!--Fim do header -->
 
+<!--Inicio do container perfil-->
   <main class="painel-container">
     
     <section class="perfil">
 
       <div class="perfil-container">
         <label for="fotoPerfil" class="foto-label">
-          <img 
+         <!-- <img 
             id="previewFoto"
             src="img/avatar.png" 
             alt="Foto de perfil">
-            <span>Alterar Foto</span>
+            <span>Alterar Foto</span>-->
         </label>
 
         <input
@@ -44,23 +44,26 @@
       <p><strong>Email:</strong> <span id="email"></span></p>
       <p><strong>Serviço:</strong> <span id="servico"></span></p>
     </section>
+<!--Fim do perfil-->
 
+<!--Inicio do container pedidos-->
     <section class="pedidos">
       <h3>Pedidos Recebidos</h3>
       <ul id="listaPedidos">
         <li>Nenhum pedido ainda.</li>
       </ul>
     </section>
+<!--Fim do pedidos-->
 
+
+<!--Inicio das aba Avaliações-->
     <div class="abas-perfil">
-      <button class="aba ativa" data-aba="avaliacoes">Avaliações</button>
-      <button class="aba" data-aba="mapa">Mapa / Rotas</button>
-    </div>
 
-    <div class="conteudo-aba ativa" id="avaliacoes">
-      <h3>Avaliações</h3>
+      <div class="conteudo-aba" id="Avaliacoes">
 
-      <div id="listaAvaliacoes"></div>
+      <button onclick="mostrarAvaliacoes()"data-aba="avaliacoes">Avaliações</button>
+     
+      <div id="listasAvaliacoes"></div>
 
       <textarea name="cometario" id="cometario" placeholder="Deixe sua avaliação"></textarea>
 
@@ -72,15 +75,23 @@
         <option value="1">⭐</option>
       </select>
      <button id="btnAvaliar">Avaliar</button>
-     </div>
 
+     </div>
+<!--Fim da aba Avaliações-->
+
+<!--Inicio da aba Mapa-->
      <div class="conteudo-aba" id="mapa">
+
+       <button onclick="mostrarMapa()" class="aba" data-aba="mapa">Mapa / Rotas</button>
+
       <h3>Minha Localização</h3>
 <div id="map" style="height: 300px;"></div>
-     </div>
+</div>
+<!--Fim da aba Mapa-->
 
+</div>
   </main>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="js/painel-prestador.js"></script>
 
 </body>

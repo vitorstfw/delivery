@@ -231,26 +231,31 @@ border-radius: 10px;
 
 /* estilos das abas */
 
-.aba {
-  padding: 8px 16px;
-  cursor: pointer;
-}
 
-.aba.ativa{
-  background: #007bff;
-  color: #fff;
-}
-
-.conteudo-aba{
-  display: none;
-  margin-top: 20px;
-}
-
-.conteudo-aba.ativa{
-  display: block;
-}
 
 #map {
   width: 100%;
   border-radius: 8px;
 }
+
+#nota{
+  display: flex;
+  margin:5px;
+  padding: 8px;
+}
+
+#btnAvaliar{
+  background: #0151a6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+}
+
+#btnAvaliar:hover{
+  background: #003d75;
+}
+
+

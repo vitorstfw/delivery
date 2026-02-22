@@ -34,7 +34,7 @@ if(meuspedidos.length === 0){
   lista.innerHTML = "<p>Nenhum pedido recebido.</p>";
 }
 
-meuspedidos.array.forEach(element => {
+meuspedidos.forEach(pedidos => {
   const li = document.createElement("li");
   li.textContent = `${pedidos.servicos} - ${pedidos.status}`;
   lista.appendChild(li);
@@ -89,10 +89,10 @@ abas.forEach(botao => {
 
 let avaliacoes = [];
 
-const lista = document.getElementById("listaAvaliacoes");
-const btnAvaliacoes = document.getElementById("btnAvaliacoes");
+const listas = document.getElementById("listasAvaliacoes");
+const btnAvaliar = document.getElementById("btnAvaliar");
 
-btnAvaliacoes.addEventListener("click", () =>{
+btnAvaliar.addEventListener("click", () =>{
   const comentario = document.getElementById("comentario").value;
   const nota = document.getElementById("nota").value;
 
@@ -105,11 +105,11 @@ btnAvaliacoes.addEventListener("click", () =>{
 });
 
 function renderAvaliacoes() {
-  lista.innerHTML = "";
+  listas.innerHTML = "";
 
   avaliacoes.forEach(a => {
-    list.innerHTML += `
-    div class="avaliacao">
+    listas.innerHTML += `
+    <div class="avaliacao">
     <strong>${"⭐".repeat(a.nota)}</strong>
     <p>${a.comentario}</p>
     </div>
@@ -122,10 +122,26 @@ function iniciarMapa() {
 map.invalidateSize();
 return;
   }
-map = LargestContentfulPaint.map("map").setView([-23.5505, -46.6333], 13);
+
+function mostrarMapa() {
+  document.getElementById("mapa").style.display = "block";
+  document.getElementById("Avaliacoes").style.display = "none";
+
+  setTimeout(() => {
+    if (typeof map === "undefined") {
+      map.invalidateSize();
+    }
+  }, 200);
+}
+ function mostrarAvaliacoes() {
+  document.getElementById("Avaliacoes").style.display = "none";
+  document.getElementById("mapa").style.display = "block";
+}
+
+map = L.map("map").setView([-23.5505, -46.6333], 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-  attribution: "© OpenStreetMap"
+  attribution: "© OpenStreetMap",
 }).addTo(map);
 
 navigator.geolocation.watchPosition(pos => {
