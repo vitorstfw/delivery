@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <header class="topo">
-        <h2>Meu perfil </h2>
+
+<!--Inicio do header-->
+    <header class="painel-header">
+        <h2>Painel Usuário </h2>
         <button id="btnSair">Sair</button>
     </header>
+<!--Fim do header-->
 
-<main class="painel-container">
 
-<section class="perfil">
+<!--Inicio da aba Perfil-->
+        <section class="perfil">
+
         <div class="perfil-container">
+     
+
         <label for="fotoPerfil" class="foto-label">
           <img 
             id="previewFoto"
             src="img/avatar.png" 
             alt="Foto de perfil">
-            <span>Alterar Foto</span>
+            <span>Alterar Foto</span> 
         </label>
 
         
@@ -31,18 +37,25 @@
           id="fotoPerfil"
           accept="image/*"
           hidden>
-      </div>
-        
+
+         
+
+        </div>
             <p><strong>Nome:</strong><h3> <span id="nome"></span></h3></p>
             <p><strong>Email:</strong><h3> <span id="email"></span></h3></p>
         </section>
+<!--Inicio da aba Perfil-->
 
-        <section class="card">
+        <main class="painel-container">
+
+<!--Inicio de pedidos-->
+        <section class="pedidos">
             <h4>Meus pedidos</h4>
         <ul id="listaPedidos">
             <li>Nenhum pedido realizado.</li>
         </ul>
         </section>
+<!--Inicio de pedidos-->
 </main>
 
     <script src="js/perfil-usuario.js"></script>

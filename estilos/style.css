@@ -1,5 +1,6 @@
-@charset 'utf-8';
+@charset "utf-8";
 
+/*Inicio do Index.html*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -40,144 +41,6 @@ header {
   padding: 20px;
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-/* css de prestadores*/
-
-form {
-  max-width: 400px;
-  margin: 30px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-}
-
-form button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background: #ff6a00;
-  color: white;
-  border: none;
-  cursor: pointer;}
-
-  /* css para o painel de prestadores*/
-
-  .painel-header {
-  background: #4f46e5;
-  color: #fff;
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.painel-header button {
-  background: #ef4444;
-  border: none;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.painel-container {
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-}
-
-.perfil, .pedidos {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0,0,0,.08);
-}
-
-.pedidos ul {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.foto-perfil {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ccc;
-}
-
-/* perfil do usuário */
-
-.topo{
-  background: #4f46e5;
-  color: #fff;
-  padding: 16px 24px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.topo button{
-  background: #ef4444;
-  border: none;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.container{
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 20px;
-}
-
-.perfil p{
-  text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555;
-}
-
-.perfil h3{
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.card{
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,.08);
-}
-
-.card h4{
-  margin-bottom: 15px;
-  color: #333;
-}
-
 #lista-servicos li{
   padding: 10px;
   border-bottom: 1px solid #e5e7eb;
@@ -193,15 +56,68 @@ align-items: center;
     grid-template-columns: 1fr;
   }
 }
+/*Fim do Index.html*/
 
-/* Fim do css do perfil do usuário */
 
-/* perfil do usuário prestador*/
+  /*Inicio do painel de prestadores*/
+
+  .painel-header {
+  background: #4f46e5;
+  color: #fff;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btnSair {
+  background: #ef4444;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.painel-container {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  margin: 20px;
+}
+
+.perfil, .pedidos {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.pedidos ul {
+  list-style: none;
+  margin-top: 10px;
+
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+/* Fim dos paineis de presdadores / usuarios */
+
+/* Inicio de perfis do usuário / prestador*/
 .perfil-container{
   display: flex;
  justify-content: center;
+ align-items: center;
  margin: 20px 0;
 }
+
 
 .foto-label{
   position: relative;
@@ -228,10 +144,35 @@ font-size: 14px;
 padding: 4px 8px;
 border-radius: 10px;
 }
+/*Fim dos perfis de usuarios / prestadores*/
 
 /* estilos das abas */
 
+.abas-perfil{
+width: 40vw;
+height: 50vh;
+  background-color: #0d6efd;
+}
 
+#Avaliacoes{
+  background: #ef4444;
+}
+
+.aba {
+  display:flex;
+justify-self:center;
+  padding:15px 25px 15px 25px;
+  margin-bottom: 5px;
+  border: 5px;
+  border-radius: 5px;
+  background: #9bc1fa;
+}
+
+h3{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10px;
+}
 
 #map {
   width: 100%;
@@ -240,7 +181,7 @@ border-radius: 10px;
 
 #nota{
   display: flex;
-  margin:5px;
+  margin:5px 5px 5px 0px;
   padding: 8px;
 }
 

@@ -20,7 +20,6 @@ if (file){
 }
 });
 
-
 const pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 
 const meuspedidos = pedidos.filter(
@@ -157,3 +156,9 @@ navigator.geolocation.watchPosition(pos => {
 });
 
 }
+
+
+document.getElementById("btnSair").addEventListener("click", () =>{
+localStorage.removeItem("usarioLogado");
+window.location.href = "login-prestadores.html";
+});

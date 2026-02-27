@@ -18,33 +18,36 @@
 <!--Fim do header -->
 
 <!--Inicio do container perfil-->
-  <main class="painel-container">
-    
-    <section class="perfil">
 
-      <div class="perfil-container">
+     <section class="perfil">
+<div class="perfil-container">
+
         <label for="fotoPerfil" class="foto-label">
-         <!-- <img 
+          <!--<img 
             id="previewFoto"
             src="img/avatar.png" 
-            alt="Foto de perfil">
-            <span>Alterar Foto</span>-->
+            alt=" perfil">
+            <span>Alterar Foto</span> -->
         </label>
 
+        
         <input
          type="file" 
          name="fotoPerfil"
           id="fotoPerfil"
           accept="image/*"
           hidden>
-      </div>
-
-      <h3>Meu Perfil</h3>
-      <p><strong>Nome:</strong> <span id="nome"></span></p>
+        </div>
+        
+  
+    <h3>Meu Perfil</h3>
+    <p><strong>Nome:</strong><h3> <span id="nome"></span></h3></p>
       <p><strong>Email:</strong> <span id="email"></span></p>
       <p><strong>Serviço:</strong> <span id="servico"></span></p>
     </section>
 <!--Fim do perfil-->
+
+ <main class="painel-container">
 
 <!--Inicio do container pedidos-->
     <section class="pedidos">
@@ -59,14 +62,14 @@
 <!--Inicio das aba Avaliações-->
     <div class="abas-perfil">
 
+      <h3>Minha Avaliação</h3>  
+
+      <button onclick="mostrarAvaliacoes()" class="aba"
+      data-aba="avaliacoes">Avaliações</button>
       <div class="conteudo-aba" id="Avaliacoes">
+        <textarea name="comentario" id="comentario" placeholder="Deixe seu comentário"></textarea>
 
-      <button onclick="mostrarAvaliacoes()"data-aba="avaliacoes">Avaliações</button>
-     
       <div id="listasAvaliacoes"></div>
-
-      <textarea name="cometario" id="cometario" placeholder="Deixe sua avaliação"></textarea>
-
       <select name="nota" id="nota">
         <option value="5">⭐⭐⭐⭐⭐</option>
         <option value="4">⭐⭐⭐⭐</option>
@@ -80,11 +83,11 @@
 <!--Fim da aba Avaliações-->
 
 <!--Inicio da aba Mapa-->
+
+      <h3>Minha localização</h3>
+       <button onclick="mostrarMapa()" class="aba" data-aba="mapa">Mapa / Rotas</button>
      <div class="conteudo-aba" id="mapa">
 
-       <button onclick="mostrarMapa()" class="aba" data-aba="mapa">Mapa / Rotas</button>
-
-      <h3>Minha Localização</h3>
 <div id="map" style="height: 300px;"></div>
 </div>
 <!--Fim da aba Mapa-->
